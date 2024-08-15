@@ -1,0 +1,133 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Optional: Set a background color */
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    text-align: center;
+    margin-top: 23px;
+}
+
+table {
+    margin: auto;
+}
+
+input {
+    border-radius: 21px;
+    border: 5px solid #0d0e0d;
+    font-size: 34px;
+    height: 65px;
+    width: 456px;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+input:focus {
+    box-shadow: 0 0 15px rgba(48, 139, 224, 0.7);
+}
+
+button {
+    border-radius: 20px;
+    font-size: 40px;
+    background: #978fa0;
+    width: 102px;
+    height: 90px;
+    margin: 6px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #837d8e;
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+.calculator {
+    border: 4px solid #0d0e0e;
+    background-color: #308be0;
+    padding: 23px;
+    border-radius: 53px;
+    display: inline-block;
+    animation: pop-in 0.5s ease;
+}
+
+h1 {
+    font-size: 28px;
+    font-family: 'Courier New', Courier, monospace;
+    animation: fade-in 1s ease;
+}
+
+.error-image {
+    display: none; /* Initially hide the error image */
+    position: absolute; /* Position it absolutely within the calculator */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust the centering */
+    width: 500px; /* Adjust the size as needed */
+    z-index: 10; /* Ensure it appears above other content */
+    animation: fade-in-out 2s ease; /* Apply the fade-in-out animation */
+}
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+input.error {
+    animation: shake 0.5s;
+}
+
+/* Glow effect for buttons */
+button.glow {
+    background-color: #00ff00;
+    box-shadow: 0 0 15px #00ff00;
+}
+
+/* Keyframes for animations */
+@keyframes pop-in {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
